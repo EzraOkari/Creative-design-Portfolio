@@ -1,0 +1,6 @@
+{
+  "name": "Facet — Designed in Glass",
+  "description": "WebGL hero for Facet, a real-time material studio, rendered across thick smoked-glass shards with live breathing cuts, refraction seams, cursor iridescence, and interactive shatter physics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+        }
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facet — Designed in Glass</title>
+    <meta
+      name="description"
+      content="WebGL hero for Facet, a real-time material studio, rendered across thick smoked-glass shards with live breathing cuts, refraction seams, cursor iridescence, and interactive shatter physics."
+    />
+    <meta property="og:title" content="Facet — Designed in Glass" />
+    <meta
+      property="og:description"
+      content="WebGL hero for Facet, a real-time material studio, rendered across thick smoked-glass shards with live breathing cuts, refraction seams, cursor iridescence, and interactive shatter physics."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5.1.0/files/inter-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main id="viewport" aria-label="Ezra Okari Digital Artist and 2D Visual Designer Portfolio">
+      <!-- WebGL Canvas Mount -->
+      <div id="webgl-mount" aria-hidden="true"></div>
+
+      <!-- Homography-mapped Selectable Text & Hit Layer over Tilted Glass Slab -->
+      <div id="dom-stage">
+        <div id="dom-block-layer">
+          <header id="dom-nav">
+            <a href="#summary" id="hit-brand" class="dom-hit dom-text" data-nav="brand">Ezra Okari</a>
+            <nav id="dom-nav-links" aria-label="Primary">
+              <a href="#projects" class="dom-hit dom-text" data-nav="projects">Projects</a>
+              <a href="#experience" class="dom-hit dom-text" data-nav="experience">Experience</a>
+              <a href="#skills" class="dom-hit dom-text" data-nav="skills">Skills</a>
+            </nav>
+            <button type="button" id="hit-signin" class="dom-hit dom-text" data-nav="contact">
+              Contact
+            </button>
+          </header>
+
+          <section id="dom-panel" aria-labelledby="dom-h1">
+            <p id="dom-eyebrow" class="dom-text">DIGITAL ARTIST &middot; 2D VISUAL DESIGNER</p>
+            <h1 id="dom-h1" class="dom-text">
+              <span id="dom-h1-line1">Ezra Okari</span>
+              <span id="dom-h1-line2">Visual Design.</span>
+            </h1>
+            <p id="dom-sub" class="dom-text">
+              <span id="dom-sub-line1">Graphic design, branding, social media visuals, photography, and</span>
+              <span id="dom-sub-line2">concept-led visual storytelling from Kenya.</span>
+            </p>
+            <div id="dom-ctas">
+              <button type="button" id="hit-open-studio" class="dom-hit dom-text">
+                Get in touch
+              </button>
+              <button type="button" id="hit-read-paper" class="dom-hit dom-text">
+                Explore work &rarr;
+              </button>
+            </div>
+            <span id="dom-copy" class="dom-text">Kenya &middot; +254 1140 597 23</span>
+            <span id="dom-spec" class="dom-text">okariezra15@gmail.com</span>
+          </section>
+        </div>
+      </div>
+
+      <!-- Second View: Full Portfolio Dossier + 3D Back Smoked-Glass Sliver -->
+      <section id="definitions-view" aria-hidden="true">
+        <button type="button" id="back-hit-btn" aria-label="Back to glass hero" disabled>
+          <span class="back-fallback-label">&larr; Back</span>
+        </button>
+
+        <article id="definitions-column">
+          <div class="dossier-header">
+            <p class="dossier-kicker">EZRA OKARI &middot; KENYA &middot; +254 1140 597 23 &middot; okariezra15@gmail.com</p>
+            <h2 id="definitions-title">Selected portfolio &amp; experience.</h2>
+
+            <div class="dossier-tabs" role="tablist" aria-label="Portfolio sections">
+              <button type="button" class="dossier-tab is-active" data-dossier-tab="all" role="tab" aria-selected="true">
+                Overview
+              </button>
+              <button type="button" class="dossier-tab" data-dossier-tab="projects" role="tab" aria-selected="false">
+                Projects
+              </button>
+              <button type="button" class="dossier-tab" data-dossier-tab="experience" role="tab" aria-selected="false">
+                Experience
+              </button>
+              <button type="button" class="dossier-tab" data-dossier-tab="skills" role="tab" aria-selected="false">
+                Skills &amp; CV
+              </button>
+            </div>
+          </div>
+
+          <div id="definitions-list" class="dossier-scroll">
+            <!-- Selected Portfolio Projects -->
+            <div class="dossier-group" data-section="projects">
+              <h3 class="dossier-section-heading">01. Selected Concept Projects</h3>
+              <p>
+                <strong>Eco-Friendly Packaging Design</strong> &mdash; Concept Project &middot; Explored a minimal, sustainability-focused packaging direction, combining product presentation with clear visual communication.
+              </p>
+              <p>
+                <strong>Augmented Reality Storybook</strong> &mdash; Concept Project &middot; Developed a concept for combining traditional storytelling with digital interaction, including proposed 3D animations and interactive elements (presented strictly as a concept).
+              </p>
+              <p>
+                <strong>Interactive Urban Art Installation</strong> &mdash; Concept Project &middot; Outlined a public-art concept using motion-responsive lighting to create an engaging visual experience in an urban setting.
+              </p>
+            </div>
+
+            <!-- Relevant Experience -->
+            <div class="dossier-group" data-section="experience">
+              <h3 class="dossier-section-heading">02. Relevant Experience</h3>
+              <p>
+                <strong>Creative Designer &middot; Freelance / Portfolio Projects &middot; 2026</strong> &mdash; Developed branding and visual identity concepts with attention to composition, color systems, typography, and consistency; created concept-led visuals maintaining a coherent visual style.
+              </p>
+              <p>
+                <strong>Social Media Designer &middot; Freelance / Portfolio Projects &middot; 2025</strong> &mdash; Created visual content for brand-facing digital communication focused on clarity, audience engagement, and recognizable layout adaptation.
+              </p>
+              <p>
+                <strong>Freelance Designer &middot; 2024</strong> &mdash; Developed visual concepts and refined layouts across creative design projects, applying disciplined judgment to composition, imagery, and presentation.
+              </p>
+            </div>
+
+            <!-- Summary, Core Skills & CV -->
+            <div class="dossier-group" data-section="skills">
+              <h3 class="dossier-section-heading">03. Summary &amp; Core Capabilities</h3>
+              <p>
+                <strong>Professional Focus</strong> &mdash; Creative visual designer turning briefs into polished imagery across graphic design, branding, social media visuals, and photography, with particular interest in digital image editing, annotation, visual refinement, and guideline-consistent asset variation workflows.
+              </p>
+              <p>
+                <strong>Core Skills</strong> &mdash; Graphic design &amp; visual composition &middot; Branding &amp; visual identity &middot; Social media &amp; promotional graphics &middot; Color, typography, layout &amp; visual hierarchy &middot; Photography &amp; image selection &middot; Concept development &amp; visual storytelling &middot; Creative direction &amp; style consistency &middot; Detail-oriented review &amp; brief interpretation &middot; Packaging &amp; product-visual concepts &middot; Clear communication &amp; time management.
+              </p>
+              <div class="dossier-actions">
+                <button type="button" class="dossier-action-btn" id="btn-preview-cv">
+                  Preview CV PDF
+                </button>
+                <a
+                  href="/assets/aistudio/Ezra_Okari_Digital_Artist_CV_fe994ecb.pdf"
+                  download="Ezra_Okari_Digital_Artist_CV.pdf"
+                  class="dossier-action-link"
+                >
+                  Download CV &darr;
+                </a>
+                <a href="mailto:okariezra15@gmail.com" class="dossier-action-link">
+                  okariezra15@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- On-demand Portfolio / Contact / Material Drawer -->
+      <aside id="studio-sheet" hidden aria-label="Ezra Okari portfolio details">
+        <div id="studio-sheet-inner"></div>
+      </aside>
+
+      <!-- In-App CV PDF Lightbox Modal (avoids window.open in iframe) -->
+      <div id="cv-modal" hidden role="dialog" aria-modal="true" aria-label="Ezra Okari CV PDF Preview">
+        <div class="cv-modal-card">
+          <div class="cv-modal-bar">
+            <span class="cv-modal-title">Ezra Okari &mdash; Digital Artist &amp; 2D Visual Designer (CV)</span>
+            <div class="cv-modal-actions">
+              <a
+                href="/assets/aistudio/Ezra_Okari_Digital_Artist_CV_fe994ecb.pdf"
+                download="Ezra_Okari_Digital_Artist_CV.pdf"
+                class="cv-download-btn"
+              >
+                Download PDF
+              </a>
+              <button type="button" id="cv-modal-close" class="sheet-close">Close</button>
+            </div>
+          </div>
+          <iframe
+            id="cv-iframe"
+            title="Ezra Okari Digital Artist CV"
+            src="/assets/aistudio/Ezra_Okari_Digital_Artist_CV_fe994ecb.pdf"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Reduced Motion / No-WebGL Static Smoked-Glass Fallback -->
+      <div id="static-fallback" hidden>
+        <div class="static-frame">
+          <header class="static-slab static-nav">
+            <div class="static-brand">
+              <span class="static-mark" aria-hidden="true"></span>
+              <span>Ezra Okari</span>
+            </div>
+            <nav class="static-links" aria-label="Primary">
+              <button type="button" data-static-action="projects">Projects</button>
+              <button type="button" data-static-action="experience">Experience</button>
+              <button type="button" data-static-action="skills">Skills</button>
+            </nav>
+            <button type="button" class="static-signin" data-static-action="contact">Contact</button>
+          </header>
+
+          <div class="static-panel">
+            <svg class="static-cuts" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="shardGradA" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#22232a" />
+                  <stop offset="55%" stop-color="#17171b" />
+                  <stop offset="100%" stop-color="#111115" />
+                </linearGradient>
+                <linearGradient id="shardGradB" x1="0" y1="0" x2="0.8" y2="1">
+                  <stop offset="0%" stop-color="#202128" />
+                  <stop offset="100%" stop-color="#141418" />
+                </linearGradient>
+              </defs>
+              <polygon points="4,4 216,4 380,718 335,996 4,996" fill="url(#shardGradA)" stroke="rgba(220,230,255,0.22)" stroke-width="1.5" />
+              <polygon points="224,4 511,4 476,616 389,714" fill="url(#shardGradB)" stroke="rgba(220,230,255,0.18)" stroke-width="1.5" />
+              <polygon points="519,4 836,4 712,486 484,614" fill="url(#shardGradA)" stroke="rgba(220,230,255,0.18)" stroke-width="1.5" />
+              <polygon points="391,724 484,624 714,495 861,996 344,996" fill="url(#shardGradB)" stroke="rgba(220,230,255,0.16)" stroke-width="1.5" />
+              <polygon points="844,4 996,4 996,996 869,996 721,490" fill="url(#shardGradA)" stroke="rgba(220,230,255,0.20)" stroke-width="1.5" />
+            </svg>
+
+            <div class="static-content">
+              <p class="static-eyebrow">DIGITAL ARTIST &middot; 2D VISUAL DESIGNER</p>
+              <h1 class="static-h1">Ezra Okari<br />Visual Design.</h1>
+              <p class="static-sub">
+                Graphic design, branding, social media visuals, photography, and<br />
+                concept-led visual storytelling from Kenya.
+              </p>
+              <div class="static-ctas">
+                <button type="button" class="static-pill" data-static-action="contact">Get in touch</button>
+                <button type="button" class="static-paper-link" id="static-read-paper">Explore work &rarr;</button>
+              </div>
+              <div class="static-footer">
+                <span>Kenya &middot; +254 1140 597 23</span>
+                <span>okariezra15@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
