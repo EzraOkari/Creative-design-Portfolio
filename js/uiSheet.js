@@ -37,7 +37,7 @@ const PRESETS = [
   },
 ];
 
-const CV_PDF_URL = '/assets/aistudio/Ezra_Okari_Digital_Artist_CV_fe994ecb.pdf';
+const CV_PDF_URL = `${import.meta.env.BASE_URL}assets/aistudio/Ezra_Okari_Digital_Artist_CV_fe994ecb.pdf`;
 
 export function createSheetController(
   sheetEl,
