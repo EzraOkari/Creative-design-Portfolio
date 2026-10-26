@@ -35,7 +35,9 @@ function threeImportMapPlugin(): Plugin {
     },
   };
 }
-
+export default {
+  base: '/Creative-design-Portfolio/',
+}
 export default defineConfig(() => {
   return {
     plugins: [threeImportMapPlugin(), react(), tailwindcss()],
